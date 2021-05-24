@@ -20,6 +20,7 @@ RUN set -ex; \
         xz-utils \
         xvfb \
         x11vnc \
+        xrdp \
         openbox
 
 RUN set -ex; \
@@ -61,6 +62,7 @@ ENV MT4DIR=$WINEPREFIX/drive_c/mt4
 
 # @TODO Install actual versions of Mono and Gecko dynamically
 ADD cache $HOME/.cache
+ADD xrdp.ini /etc/xrdp/xrdp.ini
 USER root
 RUN chown $USER:$USER -R $HOME/.cache
 
