@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL maintainer="sergey.nevmerzhitsky@gmail.com"
 
 WORKDIR /tmp/
@@ -9,6 +9,7 @@ RUN set -ex; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         apt-transport-https \
         binutils \
+        gpg-agent \
         cabextract \
         curl \
         # To take screenshots of Xvfb display
@@ -20,16 +21,26 @@ RUN set -ex; \
         xz-utils \
         xvfb \
         x11vnc \
-        xrdp \
+        # xrdp \
         openbox
 
+
+# Install faudio missing dependency
+RUN set -ex; \
+    wget -nv https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key -O /tmp/Release.key; \
+    apt-key add - < /tmp/Release.key; \
+    apt-add-repository 'deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/ ./';
+
+
+# Install wine
+ARG WINE_BRANCH="stable"
 RUN set -ex; \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key; \
     apt-key add winehq.key; \
-    apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/; \
+    apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu/ $(grep VERSION_CODENAME= /etc/os-release | cut -d= -f2) main"; \
     DEBIAN_FRONTEND=noninteractive apt-get update -y; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --install-recommends \
-        winehq-stable; \
+        winehq-${WINE_BRANCH}; \
     rm winehq.key
 
 RUN set -ex; \
@@ -79,6 +90,9 @@ RUN set -e; \
     chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
     mkdir -p /tmp/screenshots/; \
     chown winer:winer /tmp/screenshots/
+    
+# RUN set -e; \
+    #service xrdp start;
 
 USER $USER
 WORKDIR $MT4DIR
