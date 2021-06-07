@@ -17,7 +17,7 @@ RUN set -ex; \
         software-properties-common \
         wget \
         unzip \
-        xz-utils \
+        xz-utils 
         # xvfb
 
 RUN set -ex; \
