@@ -68,6 +68,8 @@ RUN set -ex; \
     /docker/waitonprocess.sh wineserver; \
     winetricks --unattended dotnet40; \
     /docker/waitonprocess.sh wineserver
+    
+ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
 
 USER root
 COPY run_mt.sh screenshot.sh /docker/
