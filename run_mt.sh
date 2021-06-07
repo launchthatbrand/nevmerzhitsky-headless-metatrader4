@@ -20,25 +20,25 @@ term_handler() {
     # Wait end of all wine processes
     /docker/waitonprocess.sh wineserver
 
-    if ps -p $XVFB_PID > /dev/null; then
-        kill -SIGTERM $XVFB_PID
-        # Wait returns status of the killed process, with set -e this breaks the script
-        wait $XVFB_PID || true
-    fi
+    # if ps -p $XVFB_PID > /dev/null; then
+    #     kill -SIGTERM $XVFB_PID
+    #     # Wait returns status of the killed process, with set -e this breaks the script
+    #     wait $XVFB_PID || true
+    # fi
 
     # SIGTERM comes from docker stop so treat it as normal signal
-    exit 0
+    # exit 0
 }
 
 trap 'term_handler' SIGTERM
 
-Xvfb $DISPLAY -screen $SCREEN_NUM $SCREEN_WHD \
-    +extension GLX \
-    +extension RANDR \
-    +extension RENDER \
-    &> /tmp/xvfb.log &
-XVFB_PID=$!
-sleep 2
+# Xvfb $DISPLAY -screen $SCREEN_NUM $SCREEN_WHD \
+#     +extension GLX \
+#     +extension RANDR \
+#     +extension RENDER \
+#     &> /tmp/xvfb.log &
+# XVFB_PID=$!
+# sleep 2
 
 # @TODO Use special argument to pass value "startup.ini"
 wine terminal /portable startup.ini &
@@ -49,4 +49,4 @@ wait $TERMINAL_PID
 # Wait end of all wine processes
 /docker/waitonprocess.sh wineserver
 # Wait end of Xvfb
-wait $XVFB_PID
+# wait $XVFB_PID

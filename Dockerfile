@@ -18,7 +18,7 @@ RUN set -ex; \
         wget \
         unzip \
         xz-utils \
-        xvfb
+        # xvfb
 
 RUN set -ex; \
     wget -nc https://dl.winehq.org/wine-builds/winehq.key; \
