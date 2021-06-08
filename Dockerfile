@@ -64,8 +64,7 @@ RUN chown $USER:$USER -R $HOME/.cache
 
 USER $USER
 
-RUN set -ex; \
-    chown -R $USER: ~/.wine
+# RUN set -ex; \
 #    wine wineboot --init; \
 #    /docker/waitonprocess.sh wineserver; \
 #    winetricks --unattended dotnet40; \
@@ -78,7 +77,8 @@ COPY run_mt.sh screenshot.sh /docker/
 RUN set -e; \
     chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
     mkdir -p /tmp/screenshots/; \
-    chown winer:winer /tmp/screenshots/
+    chown winer:winer /tmp/screenshots/; \
+    chown -R $USER: ~/.wine
 
 USER $USER
 WORKDIR $MT4DIR
