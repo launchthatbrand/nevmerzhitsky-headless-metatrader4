@@ -46,7 +46,7 @@ ENV USER=$USER \
     HOME=$HOME
 
 RUN set -ex; \
-    groupadd -g $GROUP_ID $USER;\
+    groupadd --gid 1010 $USER;\
     useradd -u $USER_ID -d $HOME -g $USER -ms /bin/bash $USER
 
 USER $USER
@@ -78,11 +78,13 @@ RUN set -e; \
     chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
     mkdir -p /tmp/screenshots/; \
     chown winer:winer /tmp/screenshots/; \
-    chown winer:winer /home/
+    chown winer:winer /home/winer/.wine; \
+    chmod 775 /home/winer/.wine
 
 USER $USER
 WORKDIR $MT4DIR
 VOLUME /tmp/screenshots/
+VOLUME /home/winer/.wine
 
 ENTRYPOINT ["/bin/bash"]
 CMD ["/docker/run_mt.sh"]
