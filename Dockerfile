@@ -63,7 +63,9 @@ USER root
 RUN chown $USER:$USER -R $HOME/.cache
 
 USER $USER
-# RUN set -ex; \
+
+RUN set -ex; \
+    chown -R $USER: ~/.wine
 #    wine wineboot --init; \
 #    /docker/waitonprocess.sh wineserver; \
 #    winetricks --unattended dotnet40; \
