@@ -61,15 +61,14 @@ ENV MT4DIR=$WINEPREFIX/drive_c/mt4
 ADD cache $HOME/.cache
 USER root
 RUN chown $USER:$USER -R $HOME/.cache
-RUN chown $USER:$USER -R ~/.wine
 
 USER $USER
 
-# RUN set -ex; \
-#    wine wineboot --init; \
-#    /docker/waitonprocess.sh wineserver; \
-#    winetricks --unattended dotnet40; \
-#    /docker/waitonprocess.sh wineserver
+RUN set -ex; \
+    wine wineboot --init; \
+    /docker/waitonprocess.sh wineserver; \
+    winetricks --unattended dotnet40; \
+    /docker/waitonprocess.sh wineserver
     
 ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
 
@@ -78,7 +77,8 @@ COPY run_mt.sh screenshot.sh /docker/
 RUN set -e; \
     chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
     mkdir -p /tmp/screenshots/; \
-    chown winer:winer /tmp/screenshots/
+    chown winer:winer /tmp/screenshots/; \
+    chown chown $USER:$USER -R ~/.wine
 
 USER $USER
 WORKDIR $MT4DIR
