@@ -63,11 +63,11 @@ USER root
 RUN chown $USER:$USER -R $HOME/.cache
 
 USER $USER
-RUN set -ex; \
-    wine wineboot --init; \
-    /docker/waitonprocess.sh wineserver; \
-    winetricks --unattended dotnet40; \
-    /docker/waitonprocess.sh wineserver
+# RUN set -ex; \
+#    wine wineboot --init; \
+#    /docker/waitonprocess.sh wineserver; \
+#    winetricks --unattended dotnet40; \
+#    /docker/waitonprocess.sh wineserver
     
 ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
 
