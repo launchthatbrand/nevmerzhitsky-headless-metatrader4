@@ -61,6 +61,7 @@ ENV MT4DIR=$WINEPREFIX/drive_c/mt4
 ADD cache $HOME/.cache
 USER root
 RUN chown $USER:$USER -R $HOME/.cache
+RUN chown $USER:$USER -R ~/.wine
 
 USER $USER
 
@@ -77,8 +78,7 @@ COPY run_mt.sh screenshot.sh /docker/
 RUN set -e; \
     chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
     mkdir -p /tmp/screenshots/; \
-    chown winer:winer /tmp/screenshots/; \
-    chown -R $USER: ~/.wine
+    chown winer:winer /tmp/screenshots/
 
 USER $USER
 WORKDIR $MT4DIR
