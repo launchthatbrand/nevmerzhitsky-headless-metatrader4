@@ -78,7 +78,7 @@ RUN set -e; \
     chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
     mkdir -p /tmp/screenshots/; \
     chown winer:winer /tmp/screenshots/; \
-    chown chown $USER:$USER -R ~/.wine
+    chown winer:winer -R ~/.wine
 
 USER $USER
 WORKDIR $MT4DIR
