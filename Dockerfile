@@ -40,12 +40,13 @@ RUN chmod a+rx /docker/waitonprocess.sh
 ARG USER=winer
 ARG HOME=/home/$USER
 ARG USER_ID=1000
+ARG GROUP_ID=1010
 # To access the values from children containers.
 ENV USER=$USER \
     HOME=$HOME
 
 RUN set -ex; \
-    groupadd $USER;\
+    groupadd -g $GROUP_ID $USER;\
     useradd -u $USER_ID -d $HOME -g $USER -ms /bin/bash $USER
 
 USER $USER
