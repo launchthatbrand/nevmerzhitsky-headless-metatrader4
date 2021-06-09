@@ -3,6 +3,27 @@ LABEL maintainer="sergey.nevmerzhitsky@gmail.com"
 
 WORKDIR /tmp/
 
+ARG USER=winer
+ARG HOME=/home/$USER
+ARG USER_ID=1000
+ARG GROUP_ID=1010
+# To access the values from children containers.
+ENV USER=$USER \
+    HOME=$HOME
+    
+ENV WINEARCH=win32 \
+    WINEPREFIX=$HOME/.wine \
+    DISPLAY=:0 \
+    SCREEN_NUM=0 \
+    SCREEN_WHD=1366x768x24
+ENV MT4DIR=$WINEPREFIX/drive_c/mt4
+
+RUN set -ex; \
+    groupadd --gid 1010 $USER;\
+    useradd -u $USER_ID -d $HOME -g $USER -ms /bin/bash $USER
+    
+USER root
+
 RUN set -ex; \
     dpkg --add-architecture i386; \
     DEBIAN_FRONTEND=noninteractive apt-get update -y; \
@@ -34,34 +55,11 @@ RUN set -ex; \
     chmod +x winetricks; \
     mv winetricks /usr/local/bin
 
-COPY waitonprocess.sh /docker/
-RUN chmod a+rx /docker/waitonprocess.sh
-
-ARG USER=winer
-ARG HOME=/home/$USER
-ARG USER_ID=1000
-ARG GROUP_ID=1010
-# To access the values from children containers.
-ENV USER=$USER \
-    HOME=$HOME
-
-RUN set -ex; \
-    groupadd --gid 1010 $USER;\
-    useradd -u $USER_ID -d $HOME -g $USER -ms /bin/bash $USER
-
-USER $USER
-
-ENV WINEARCH=win32 \
-    WINEPREFIX=$HOME/.wine \
-    DISPLAY=:0 \
-    SCREEN_NUM=0 \
-    SCREEN_WHD=1366x768x24
-ENV MT4DIR=$WINEPREFIX/drive_c/mt4
-
-# @TODO Install actual versions of Mono and Gecko dynamically
+COPY waitonprocess.sh run_mt.sh screenshot.sh /docker/
 ADD cache $HOME/.cache
-USER root
-RUN chown $USER:$USER -R $HOME/.cache
+ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
+RUN chmod a+rx /docker/
+RUN chmod a+rx $HOME
 
 USER $USER
 RUN set -ex; \
@@ -70,21 +68,8 @@ RUN set -ex; \
     winetricks --unattended dotnet40; \
     /docker/waitonprocess.sh wineserver
     
-ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
 
-USER root
-COPY run_mt.sh screenshot.sh /docker/
-RUN set -e; \
-    chmod a+rx /docker/run_mt.sh /docker/screenshot.sh; \
-    mkdir -p /tmp/screenshots/; \
-    chown winer:winer /tmp/screenshots/; \
-    chown winer:winer /home/winer/.wine; \
-    chmod 775 /home/winer/.wine
-
-USER $USER
 WORKDIR $MT4DIR
-VOLUME /tmp/screenshots/
-VOLUME /home/winer/.wine
 
 ENTRYPOINT ["/bin/bash"]
 CMD ["/docker/run_mt.sh"]
