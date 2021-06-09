@@ -57,13 +57,13 @@ RUN set -ex; \
 
 COPY waitonprocess.sh run_mt.sh screenshot.sh /docker/
 ADD cache $HOME/.cache
-ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
 RUN set -ex; \
     chmod a+rx -R /docker/; \
     chown $USER:$USER -R ~/.wine; \
     chown $USER:$USER -R $HOME/.cache
 
 USER $USER
+ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
 RUN set -ex; \
     wine wineboot --init; \
     /docker/waitonprocess.sh wineserver; \
