@@ -57,7 +57,6 @@ RUN set -ex; \
 
 COPY waitonprocess.sh run_mt.sh screenshot.sh /docker/
 ADD cache $HOME/.cache
-ADD /mt4_kot4x /tmp/mt4/
 RUN set -ex; \
     chmod a+rx -R /docker/; \
     chown $USER:$USER -R $HOME/.cache
