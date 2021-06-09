@@ -63,7 +63,7 @@ RUN set -ex; \
     chown $USER:$USER -R $HOME/.cache
 
 USER $USER
-ADD /mt4_kot4x /home/winer/.wine/drive_c/mt4
+ADD /mt4_kot4x /tmp/mt4
 RUN set -ex; \
     wine wineboot --init; \
     /docker/waitonprocess.sh wineserver; \
