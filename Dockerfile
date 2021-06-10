@@ -59,7 +59,8 @@ COPY waitonprocess.sh run_mt.sh screenshot.sh /docker/
 ADD cache $HOME/.cache
 RUN set -ex; \
     chmod a+rx -R /docker/; \
-    chown $USER:$USER -R $HOME/.cache
+    chown $USER:$USER -R $HOME/.cache; \
+    chown $USER:$USER -R $HOME/.wine; \
 
 USER $USER
 RUN set -ex; \
