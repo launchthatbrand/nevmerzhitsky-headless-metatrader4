@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 LABEL maintainer="sergey.nevmerzhitsky@gmail.com"
 
 WORKDIR /tmp/
-RUN echo "root:root" | chpasswd
+# RUN echo "root:root" | chpasswd
 
 ARG USER=winer
 ARG HOME=/home/$USER
@@ -25,7 +25,7 @@ RUN set -ex; \
     
 USER root
 
-RUN set -ex; \
+RUN set -ex; /
     dpkg --add-architecture i386; \
     DEBIAN_FRONTEND=noninteractive apt-get update -y; \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -60,7 +60,7 @@ COPY waitonprocess.sh run_mt.sh screenshot.sh /docker/
 ADD cache $HOME/.cache
 RUN set -ex; \
     chmod a+rx -R /docker/; \
-    chown $USER:$USER -R $HOME/.cache
+    chown $USER:$USER -R $HOME/
 
 USER $USER
 RUN set -ex; \
