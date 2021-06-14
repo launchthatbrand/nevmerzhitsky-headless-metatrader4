@@ -57,6 +57,7 @@ RUN set -ex; \
 
 COPY waitonprocess.sh run_mt.sh screenshot.sh /docker/
 ADD cache $HOME/.cache
+ADD cache/fonts $HOME/.wine/drive_c/windows/Fonts
 RUN set -ex; \
     chmod a+rx -R /docker/; \
     chown $USER:$USER -R $HOME
