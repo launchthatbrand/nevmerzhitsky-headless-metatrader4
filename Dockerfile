@@ -63,7 +63,7 @@ RUN set -ex; \
     chown $USER:$USER -R $HOME
 
 USER $USER
-#RUN set -ex; \
+RUN set -ex; \
     wine wineboot --init; \
     /docker/waitonprocess.sh wineserver; \
     winetricks --unattended dotnet40; \
