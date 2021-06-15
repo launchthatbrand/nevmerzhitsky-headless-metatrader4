@@ -66,8 +66,8 @@ USER $USER
 #RUN set -ex; \
 #    wine wineboot --init; \
 #    /docker/waitonprocess.sh wineserver; \
-#    winetricks --unattended dotnet40; \
-#    /docker/waitonprocess.sh wineserver
+    winetricks --unattended dotnet40; \
+    /docker/waitonprocess.sh wineserver
     
 
 WORKDIR $MT4DIR
