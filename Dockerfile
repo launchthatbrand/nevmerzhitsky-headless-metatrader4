@@ -64,13 +64,14 @@ RUN set -ex; \
 
 USER $USER
 #RUN set -ex; \
-#    wine wineboot --init; \
-#    /docker/waitonprocess.sh wineserver; \
+    wine wineboot --init; \
+    /docker/waitonprocess.sh wineserver; \
     winetricks --unattended dotnet40; \
     /docker/waitonprocess.sh wineserver
     
 
-WORKDIR $MT4DIR
+#WORKDIR $MT4DIR
+WORKDIR $HOME
 
 ENTRYPOINT ["/bin/bash"]
 CMD ["/docker/run_mt.sh"]
