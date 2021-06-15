@@ -41,7 +41,7 @@ trap 'term_handler' SIGTERM
 # sleep 2
 
 # @TODO Use special argument to pass value "startup.ini"
-wine terminal /portable startup.ini &
+wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
 TERMINAL_PID=$!
 
 # Wait end of terminal
