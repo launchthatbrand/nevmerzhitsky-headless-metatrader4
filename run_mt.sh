@@ -40,6 +40,9 @@ trap 'term_handler' SIGTERM
 # XVFB_PID=$!
 # sleep 2
 
+mkdir -p /home/winer/.wine/drive_c/windows/Fonts
+cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
+
 # @TODO Use special argument to pass value "startup.ini"
 wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
 TERMINAL_PID=$!
