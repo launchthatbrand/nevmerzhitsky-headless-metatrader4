@@ -43,6 +43,9 @@ trap 'term_handler' SIGTERM
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 
+if [ "${BRAND}" && "${PRODUCT}" ]; then
+    cp -R /home/winer/mt4/"${BRAND}"/"${PRODUCT}" /home/winer/.wine/drive_c/mt4
+
 # @TODO Use special argument to pass value "startup.ini"
 wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
 TERMINAL_PID=$!
