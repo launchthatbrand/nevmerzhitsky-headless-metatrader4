@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Break script on any non-zero status of any command
-set -e
+#set -e
 
 export DISPLAY SCREEN_NUM SCREEN_WHD
 
@@ -42,6 +42,9 @@ trap 'term_handler' SIGTERM
 
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
+
+echo "brand: ${BRAND}"
+echo "brand: $BRAND"
 
 if [[ -z "${BRAND}" ]]; then
     echo "brand: ${BRAND}"
