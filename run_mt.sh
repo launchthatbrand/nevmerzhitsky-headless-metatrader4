@@ -67,3 +67,6 @@ fi
 #*/docker/waitonprocess.sh wineserver
 # Wait end of Xvfb
 # wait $XVFB_PID
+
+
+while true; do sleep 1; done
