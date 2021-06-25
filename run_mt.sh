@@ -47,11 +47,11 @@ echo "brand: ${BRAND}"
 echo "brand: $BRAND"
 echo $BRAND
 
-if [[ -z "$BRAND" ]]; then
+if [ -z "$BRAND" ]; then
     echo "brand: ${BRAND}"
-    mkdir -p /home/winer/.wine/drive_c/mt4 && cp -R /home/winer/mt4/lvrg /home/winer/.wine/drive_c/mt4
+    cp -R /home/winer/mt4/lvrg /home/winer/.wine/drive_c/mt4
     
-    if [[ -z "${BRAND}" && -z "${BRAND}" ]]; then
+    if [ -z "${BRAND}" && -z "${BRAND}" ]; then
         cp -R /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
         
     fi
