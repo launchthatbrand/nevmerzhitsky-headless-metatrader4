@@ -1,0 +1,11 @@
+0	16:13:30.894	KOT MT4 build 1332 started (KOT LTD)
+0	16:13:30.896	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1116 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	16:13:30.896	Data Folder: C:\mt4
+2	16:13:32.951	Expert LVRG_8 EURUSD,H1: loaded successfully
+0	20:21:25.379	KOT MT4 build 1332 started (KOT LTD)
+0	20:21:25.380	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1005 / 2443 Mb, Disk: 6 / 49 Gb, GMT+0
+0	20:21:25.380	Data Folder: C:\mt4
+2	20:21:44.077	Expert LVRG_8 EURUSD,H1: loaded successfully
+0	16:13:54.276	'1453114': login on KOT-Demo through FOREX-Demo (ping: 8.59 ms)
+0	16:13:54.485	'1453114': previous successful authorization performed from 3.90.13.54
+0	16:13:55.263	'1453114': ping to current access point FOREX-Demo is 8.65 ms
