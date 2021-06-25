@@ -40,27 +40,24 @@ trap 'term_handler' SIGTERM
 # XVFB_PID=$!
 # sleep 2
 
+
+# Set default values
+BRAND=${BRAND:-lvrg}
+PRODUCT=${PRODUCT:-type-m-v8}
+
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
-
-echo "brand: ${BRAND}"
-echo "brand: $BRAND"
-echo $BRAND
-
 cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
 cp -R /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
- 
+
 
 # @TODO Use special argument to pass value "startup.ini"
-# wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
+wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
 # TERMINAL_PID=$!
 
 # Wait end of terminal
-#*wait $TERMINAL_PID
+wait $TERMINAL_PID
 # Wait end of all wine processes
-#*/docker/waitonprocess.sh wineserver
+/docker/waitonprocess.sh wineserver
 # Wait end of Xvfb
 # wait $XVFB_PID
-
-
-while true; do sleep 1; done
