@@ -58,12 +58,12 @@ if [[ -z "$BRAND" ]]; then
 fi   
 
 # @TODO Use special argument to pass value "startup.ini"
-wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
-TERMINAL_PID=$!
+# wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
+# TERMINAL_PID=$!
 
 # Wait end of terminal
-wait $TERMINAL_PID
+#*wait $TERMINAL_PID
 # Wait end of all wine processes
-/docker/waitonprocess.sh wineserver
+#*/docker/waitonprocess.sh wineserver
 # Wait end of Xvfb
 # wait $XVFB_PID
