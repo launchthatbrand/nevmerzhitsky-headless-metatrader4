@@ -44,6 +44,7 @@ mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 
 if [[ -v "${BRAND}" ]]; then
+    echo "brand: ${BRAND}"
     cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
     
     if [[ -v "${BRAND}" && -v "${BRAND}" ]]; then
