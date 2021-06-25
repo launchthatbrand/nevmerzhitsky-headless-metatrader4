@@ -43,7 +43,7 @@ trap 'term_handler' SIGTERM
 
 # Set default values
 BRAND=${BRAND:-lvrg}
-PRODUCT=${PRODUCT:-type-m-v8}
+PRODUCT=${PRODUCT:-"type-m-v8"}
 
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
