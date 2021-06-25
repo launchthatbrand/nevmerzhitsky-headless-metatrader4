@@ -45,9 +45,11 @@ cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 
 if [ "${BRAND}"]; then
     cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
-    
+fi
+
 if [ "${BRAND}" && "${PRODUCT}" ]; then
     cp -R /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
+fi
 
 # @TODO Use special argument to pass value "startup.ini"
 wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
