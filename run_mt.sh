@@ -45,8 +45,9 @@ cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 
 echo "brand: ${BRAND}"
 echo "brand: $BRAND"
+echo $BRAND
 
-if [[ -z "${BRAND}" ]]; then
+if [[ -z "$BRAND" ]]; then
     echo "brand: ${BRAND}"
     cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
     
