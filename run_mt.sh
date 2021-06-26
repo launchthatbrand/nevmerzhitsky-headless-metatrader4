@@ -45,6 +45,9 @@ trap 'term_handler' SIGTERM
 BRAND=${BRAND:-lvrg}
 PRODUCT=${PRODUCT:-"type-m-v8.ex4"}
 
+echo $BRAND
+echo $PRODUCT
+
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
