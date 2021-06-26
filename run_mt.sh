@@ -43,7 +43,7 @@ trap 'term_handler' SIGTERM
 
 # Set default values
 BRAND=${BRAND:-lvrg}
-PRODUCT=${PRODUCT:-"type-m-v8"".ex4"}
+PRODUCT=${PRODUCT:-"type-m-v8s.ex4"}
 
 echo $BRAND
 echo $PRODUCT
@@ -51,7 +51,7 @@ echo $PRODUCT
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
-cp -R /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
+cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
 
 
 # @TODO Use special argument to pass value "startup.ini"
