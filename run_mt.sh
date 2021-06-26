@@ -43,7 +43,7 @@ trap 'term_handler' SIGTERM
 
 # Set default values
 BRAND=${BRAND:-lvrg}
-PRODUCT=${PRODUCT:-"type-m-v8s.ex4"}
+PRODUCT=${PRODUCT:-"type-m-v8.ex4"}
 
 echo $BRAND
 echo $PRODUCT
@@ -56,7 +56,7 @@ cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}" /home/winer/.wine/drive_c/m
 
 # @TODO Use special argument to pass value "startup.ini"
 wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
-# TERMINAL_PID=$!
+TERMINAL_PID=$!
 
 # Wait end of terminal
 wait $TERMINAL_PID
