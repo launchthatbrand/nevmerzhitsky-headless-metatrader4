@@ -43,7 +43,7 @@ trap 'term_handler' SIGTERM
 
 # Set default values
 BRAND=${BRAND:-lvrg}
-PRODUCT=${PRODUCT:-"type-m-v8.ex4"}
+PRODUCT=${PRODUCT:-"type-m-v8"".ex4"}
 
 echo $BRAND
 echo $PRODUCT
