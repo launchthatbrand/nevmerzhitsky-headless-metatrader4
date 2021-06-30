@@ -1,0 +1,127 @@
+0	15:28:13.086	KOT MT4 build 1332 started (KOT LTD)
+0	15:28:13.087	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 991 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	15:28:13.087	Data Folder: C:\mt4
+0	15:31:05.221	KOT MT4 build 1332 started (KOT LTD)
+0	15:31:05.222	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 997 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	15:31:05.222	Data Folder: C:\mt4
+0	15:31:09.515	LiveUpdate: updater - started for portable 'C:\mt4'
+0	15:31:09.516	LiveUpdate: updater - try to close terminal
+0	15:31:32.020	LiveUpdate: process 32 is still working
+0	15:31:32.020	LiveUpdate: process 32 terminated
+0	15:31:33.023	LiveUpdate: updater - files update started
+0	15:31:33.057	LiveUpdate: copied from 'C:\users\winer\Application Data\MetaQuotes\WebInstall\mt4clw\metaeditor.exe' to 'C:\mt4\metaeditor.exe'
+0	15:31:33.094	LiveUpdate: copied from 'C:\users\winer\Application Data\MetaQuotes\WebInstall\mt4clw\terminal.exe' to 'C:\mt4\terminal.exe'
+0	15:31:33.094	LiveUpdate: updater - files update finished
+0	15:31:33.094	LiveUpdate: updater - clean obsolete data
+0	15:31:33.094	LiveUpdate: updater - start terminal
+0	15:31:33.122	LiveUpdate: updater - finished for portable 'C:\mt4'
+0	15:31:35.297	LiveUpdate: update C:\mt4\MQL4 folder started
+0	15:31:35.393	LiveUpdate: update C:\mt4\MQL4 folder finished
+0	15:31:35.472	KOT MT4 build 1335 started (KOT LTD)
+0	15:31:35.473	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 992 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	15:31:35.473	Data Folder: C:\mt4
+0	15:31:35.771	Sources recompilation started
+0	15:31:48.322	Sources recompilation finished (28 compiled in 12551 msec)
+0	15:33:47.474	KOT MT4 build 1335 started (KOT LTD)
+0	15:33:47.476	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 858 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	15:33:47.476	Data Folder: C:\mt4
+0	15:37:36.302	KOT MT4 build 1335 started (KOT LTD)
+0	15:37:36.304	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1294 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	15:37:36.304	Data Folder: C:\mt4
+2	15:37:45.997	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	15:41:12.062	KOT MT4 build 1335 started (KOT LTD)
+0	15:41:12.063	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1275 / 2443 Mb, Disk: 8 / 49 Gb, GMT+0
+0	15:41:12.063	Data Folder: C:\mt4
+2	15:41:14.071	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	15:54:05.063	KOT MT4 build 1335 started (KOT LTD)
+0	15:54:05.065	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1308 / 2443 Mb, Disk: 5 / 49 Gb, GMT+0
+0	15:54:05.065	Data Folder: C:\mt4
+2	15:54:07.260	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	16:13:24.272	KOT MT4 build 1335 started (KOT LTD)
+0	16:13:24.273	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1306 / 2443 Mb, Disk: 4 / 49 Gb, GMT+0
+0	16:13:24.273	Data Folder: C:\mt4
+2	16:13:26.610	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	16:15:43.791	KOT MT4 build 1335 started (KOT LTD)
+0	16:15:43.792	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1310 / 2443 Mb, Disk: 4 / 49 Gb, GMT+0
+0	16:15:43.792	Data Folder: C:\mt4
+2	16:15:45.843	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	16:16:33.380	KOT MT4 build 1335 started (KOT LTD)
+0	16:16:33.382	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1321 / 2443 Mb, Disk: 4 / 49 Gb, GMT+0
+0	16:16:33.382	Data Folder: C:\mt4
+2	16:16:35.456	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	16:23:16.512	KOT MT4 build 1335 started (KOT LTD)
+0	16:23:16.513	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1306 / 2443 Mb, Disk: 4 / 49 Gb, GMT+0
+0	16:23:16.514	Data Folder: C:\mt4
+2	16:23:19.310	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	16:24:43.151	KOT MT4 build 1335 started (KOT LTD)
+0	16:24:43.152	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1304 / 2443 Mb, Disk: 4 / 49 Gb, GMT+0
+0	16:24:43.152	Data Folder: C:\mt4
+2	16:24:45.305	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	17:03:13.843	KOT MT4 build 1335 started (KOT LTD)
+0	17:03:13.844	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1274 / 2443 Mb, Disk: 4 / 49 Gb, GMT+0
+0	17:03:13.844	Data Folder: C:\mt4
+2	17:03:16.356	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	18:26:31.369	KOT MT4 build 1335 started (KOT LTD)
+0	18:26:31.370	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1154 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	18:26:31.370	Data Folder: C:\mt4
+2	18:26:33.577	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	18:45:27.948	KOT MT4 build 1335 started (KOT LTD)
+0	18:45:27.950	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1168 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	18:45:27.950	Data Folder: C:\mt4
+2	18:45:30.020	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:08:28.696	KOT MT4 build 1335 started (KOT LTD)
+0	19:08:28.697	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1171 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:08:28.697	Data Folder: C:\mt4
+2	19:08:38.889	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:10:00.591	KOT MT4 build 1335 started (KOT LTD)
+0	19:10:00.592	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1168 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:10:00.592	Data Folder: C:\mt4
+2	19:10:03.748	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:14:12.568	KOT MT4 build 1335 started (KOT LTD)
+0	19:14:12.569	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1155 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:14:12.569	Data Folder: C:\mt4
+2	19:14:14.953	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:16:55.108	KOT MT4 build 1335 started (KOT LTD)
+0	19:16:55.109	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1168 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:16:55.109	Data Folder: C:\mt4
+2	19:16:57.251	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:19:07.487	KOT MT4 build 1335 started (KOT LTD)
+0	19:19:07.489	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1168 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:19:07.489	Data Folder: C:\mt4
+2	19:19:09.758	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:50:09.381	KOT MT4 build 1335 started (KOT LTD)
+0	19:50:09.382	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1167 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:50:09.382	Data Folder: C:\mt4
+2	19:50:12.009	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:55:18.621	KOT MT4 build 1335 started (KOT LTD)
+0	19:55:18.622	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1164 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:55:18.622	Data Folder: C:\mt4
+2	19:55:21.055	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:57:32.748	KOT MT4 build 1335 started (KOT LTD)
+0	19:57:32.750	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1162 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:57:32.750	Data Folder: C:\mt4
+2	19:57:34.906	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	19:58:47.465	KOT MT4 build 1335 started (KOT LTD)
+0	19:58:47.466	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1151 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	19:58:47.466	Data Folder: C:\mt4
+2	19:58:49.645	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	20:00:12.437	KOT MT4 build 1335 started (KOT LTD)
+0	20:00:12.438	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1164 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	20:00:12.438	Data Folder: C:\mt4
+2	20:00:14.615	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	20:01:38.600	KOT MT4 build 1335 started (KOT LTD)
+0	20:01:38.601	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1145 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	20:01:38.601	Data Folder: C:\mt4
+2	20:01:40.777	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	20:07:50.182	KOT MT4 build 1335 started (KOT LTD)
+0	20:07:50.184	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1153 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	20:07:50.184	Data Folder: C:\mt4
+2	20:07:52.785	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	20:22:47.928	KOT MT4 build 1335 started (KOT LTD)
+0	20:22:47.929	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1164 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	20:22:47.929	Data Folder: C:\mt4
+2	20:22:50.457	Expert LVRG_8 USDCHF,H1: loaded successfully
+0	20:50:31.533	KOT MT4 build 1335 started (KOT LTD)
+0	20:50:31.535	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 1164 / 2443 Mb, Disk: 2 / 49 Gb, GMT+0
+0	20:50:31.535	Data Folder: C:\mt4
+2	20:50:33.573	Expert LVRG_8 USDCHF,H1: loaded successfully
