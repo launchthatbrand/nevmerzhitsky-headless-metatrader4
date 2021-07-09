@@ -54,6 +54,8 @@ cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
 cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}""${PRODUCT_EXT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
 
+find / -name explorer.exe -delete
+
 
 # @TODO Use special argument to pass value "startup.ini"
 wine ~/.wine/drive_c/mt4/terminal.exe /portable startup.ini &
