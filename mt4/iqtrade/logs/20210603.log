@@ -1,9 +1,0 @@
-0	13:26:47.002	KOT MT4 build 1335 started (KOT LTD)
-0	13:26:47.005	Microsoft Windows 7 x86, IE 11, 2 x Intel Xeon Platinum 8259CL  @ 2.50GHz, Memory: 782 / 2443 Mb, Disk: 15 / 79 Gb, GMT+0
-0	13:26:47.005	Data Folder: C:\mt4
-0	13:27:41.404	Automated trading disabled
-3	13:27:41.405	Automated trading disabled because the account has been changed
-1	13:27:49.435	'1453114': connect failed [Invalid account]
-0	13:28:25.767	Account: new demo account '1541854' opened
-0	13:29:00.105	'1541854': login on KOT-Demo through DC2 (ping: 81.61 ms)
-0	13:29:01.060	'1541854': login datacenter on KOT-Demo through DC2 (ping: 81.61 ms)
