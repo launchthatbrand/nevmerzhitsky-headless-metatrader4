@@ -2,6 +2,14 @@
 # Break script on any non-zero status of any command
 #set -e
 
+is_enabled () {
+    echo "$1" | grep -q -i -E "^(yes|on|true|1)$"
+}
+
+is_disabled () {
+    echo "$1" | grep -q -i -E "^(no|off|false|0)$"
+}
+
 export DISPLAY SCREEN_NUM SCREEN_WHD
 
 XVFB_PID=0
@@ -43,7 +51,8 @@ trap 'term_handler' SIGTERM
 
 # Set default values
 BRAND=${BRAND:-lvrg}
-PRODUCT=${PRODUCT:-"type-m-v8"}
+PRODUCT=${PRODUCT:-"type-m"}
+PRODUCT_VER=${PRODUCT_VER:-"v22"}
 PRODUCT_EXT=${PRODUCT_EXT:-".ex4"}
 
 echo $BRAND
@@ -52,7 +61,12 @@ echo $PRODUCT
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
-cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}""${PRODUCT_EXT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
+cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}"-"${PRODUCT_VER}""${PRODUCT_EXT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
+
+# Run noVNC
+if is_enabled "${EMAIL_ALERT_EA}"; then
+    cp  /home/winer/mt4/products/NotifyOrderOpenClose.mq4 /home/winer/.wine/drive_c/mt4/MQL4/Indicators
+fi
 
 find / -name explorer.exe -delete
 
