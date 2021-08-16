@@ -51,8 +51,7 @@ trap 'term_handler' SIGTERM
 
 # Set default values
 BRAND=${BRAND:-lvrg}
-PRODUCT=${PRODUCT:-"type-m"}
-PRODUCT_VER=${PRODUCT_VER:-"v22"}
+PRODUCT=${PRODUCT:-"type-m-v22"}
 PRODUCT_EXT=${PRODUCT_EXT:-".ex4"}
 
 echo $BRAND
@@ -61,7 +60,7 @@ echo $PRODUCT
 mkdir -p /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/.cache/fonts/* /home/winer/.wine/drive_c/windows/Fonts
 cp -R /home/winer/mt4/"${BRAND}" /home/winer/.wine/drive_c/mt4
-cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}"-"${PRODUCT_VER}""${PRODUCT_EXT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
+cp  /home/winer/mt4/products/"${BRAND}"-"${PRODUCT}"-"${PRODUCT_EXT}" /home/winer/.wine/drive_c/mt4/MQL4/Experts
 
 # Run noVNC
 if is_enabled "${EMAIL_ALERT_EA}"; then
